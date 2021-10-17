@@ -35,19 +35,19 @@ struct  DetailView: View {
                 .foregroundColor(Color(red: 0.5529411764705883, green: 0.5529411764705883, blue: 0.5529411764705883))
                 .multilineTextAlignment(.center)
             Spacer()
-            Spacer()
-            Spacer()
+            
             Button {
                 count = (count+1)%3
             } label: {
-                Text("Next")
+                Image(systemName:"arrow.right")
                     .foregroundColor(Color.white)
                     .padding(20)
             }.padding(.horizontal, 30.0).background(Color(red: 0.1568627450980392, green: 0.24313725490196078, blue: 1.0)).cornerRadius(/*@START_MENU_TOKEN@*/50.0/*@END_MENU_TOKEN@*/)
-            Spacer()
-            Spacer()
+            
+            
             
         }
+        .padding(.bottom, 60.0)
     }
 }
 

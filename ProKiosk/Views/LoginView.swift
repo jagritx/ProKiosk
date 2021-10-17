@@ -100,9 +100,9 @@ struct HelloText: View {
             
     HStack{
         Text("Welcome!")
-            .font(.largeTitle)
+            .font(.system(size: 55))
             .fontWeight(.semibold)
-            .padding(.bottom)
+            .padding(0.0)
             Spacer()
     
             }
@@ -153,10 +153,9 @@ struct UsernameTextField: View {
     var body: some View {
         TextField("Username:", text: $username)
             .padding()
-            .background(lightGreyColor)
+            .background(.ultraThinMaterial)
             .cornerRadius(5.0)
             .padding(.bottom, 30)
-            .opacity(0.9)
             .foregroundColor(/*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/)
     }
 }
@@ -168,10 +167,9 @@ struct PasswordSecureField: View {
     var body: some View {
         SecureField("Password:", text: $password)
             .padding()
-            .background(lightGreyColor)
+            .background(.ultraThinMaterial)
             .cornerRadius(5.0)
             .padding(.bottom, 30)
-            .opacity(0.9)
             .foregroundColor(/*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/)
             
     }

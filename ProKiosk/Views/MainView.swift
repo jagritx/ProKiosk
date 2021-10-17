@@ -28,13 +28,13 @@ struct MainView: View {
             
             DetailView()
                 .tabItem{
-                    Image(systemName:"briefcase")
+                    Image(systemName:"building")
                     Text("Intern")}
             
             
             PrivacyView()
                 .tabItem{
-                    Image(systemName:"person.crop.circle.badge.questionmark")
+                    Image(systemName:"person.text.rectangle")
                     Text("Privacy")}
             
             

@@ -48,15 +48,22 @@ struct  HomeView: View {
                 SubjectCard()
                 SubjectCard()
             }
-            .padding(.leading, 30.0)
+            .padding(.leading, 20.0)
             }
             
             HStack{
-                Text("Attendance -")
-                    .padding([.top, .leading], 30.0)
+                Text("Attendance")
+                    .padding(.leading, 30.0)
                     .font(.system(size: 25))
                 Spacer()
+                Button {} label: {
+                    Text("See All >")
+                        .foregroundColor(Color.gray)
+                        .padding(.trailing, 30.0)
+                }
+                .padding()
             }
+            .padding(.top, 30.0)
             ZStack{
             RoundedRectangle(cornerRadius: 55)
                         .fill(Color.green)
@@ -70,17 +77,19 @@ struct  HomeView: View {
             }
             .padding()
             HStack{
-                Text("Overall")
+                Text("Overall :")
+                    .fontWeight(.semibold)
                     .padding(.horizontal, 30.0)
                     .font(.system(size: 25))
                 Spacer()
                 Button {} label: {
-                    Text("See All >")
-                        .foregroundColor(Color.gray)
+                    Text("90%")
+                        .fontWeight(.semibold)
+                        .foregroundColor(Color.black)
                         .padding(.trailing, 30.0)
                 }
             }
-            .padding(.vertical, 30.0)
+            .padding(.bottom, 30.0)
             
                  Cgpa()
                         
@@ -121,7 +130,7 @@ struct  HomeView: View {
                 }
                 .padding(.leading, 30.0)
             }
-            .padding(.top, 20.0)
+            .padding(.vertical, 20.0)
         }
         
     }
@@ -151,6 +160,7 @@ struct SubjectCard: View {
     
             }
         }
+        .padding(.horizontal, 5.0)
     }
 }
 
@@ -166,7 +176,7 @@ struct Cgpa: View {
                 .frame(width: 250, height: 250)
             VStack{
                 
-                Text("Overall")
+                Text("Total")
                     .fontWeight(.bold)
                     .foregroundColor(Color.white)
                     .font(.system(size: 27))
